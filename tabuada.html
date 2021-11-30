@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <title>ex-tabuada</title>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <h1>TABUADA</h1>
+      <div class="btn">
+        <button class="big-button" onclick="mostrarTabuada()"> Mostrar tabuada </button>
+        <button class="big-button" onclick="limparTabuada()" > Limpar tabuada  </button>
+      </div>
+      <div id="output" > </div>
+    </section>  
+    <script>
+      const output = document.getElementById('output');
+
+      function mostrarTabuada(){
+        let n = parseFloat(prompt('Digite a tabuada desejada.'))
+        let msg= ""
+
+        for(let i = 0; i <= 10; i++){
+          msg += `${n} x ${i} = ${(n * i)} <br>`
+        }
+        output.innerHTML = msg
+      }
+      function limparTabuada(){
+        output.innerHTML = ""
+      }
+    </script>
+  </body>
+  </html>
